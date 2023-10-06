@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../Controller/ThemColor.dart';
+import '../Widgiets/CustomText.dart';
 import 'HomeScreen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -19,11 +20,27 @@ class SplashScreen extends StatelessWidget {
         ),
       );
     });
+
     return Scaffold(
         body: Container(
       color: BaseColor,
       alignment: Alignment.center,
-      child: Image.asset("assets/images/Splashicon.jpeg"),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/Splashicon.png",
+            width: 2 * MediaQuery.of(context).size.width / 2.8,
+          ),
+          CustomText(
+            Txt: "Flutter & Dart",
+            colorTxt: WhiteColor,
+            weightTxt: FontWeight.bold,
+            sizeTxt: 25,
+          )
+        ],
+      ),
     ));
   }
 }

@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       )),
       body: PageView(
           controller: pageController,
-          children: [LearnDart(), LearnFlutter(), Quzie()]),
+          children: [LearnDart(), LearnFlutter(), Quzi()]),
     );
   }
 }
